@@ -6,10 +6,10 @@ class PhaseFieldNet(nn.Module):
 
     def __init__(self, layers: list[int], use_fourier: bool = True, s: float = 1.0):
         super().__init__()
-        self.use_fourier = use_ffm
+        self.use_fourier = use_fourier
         in_dim = layers[0]
 
-        if use_ffm:
+        if use_fourier:
             n_freq = 32
             B = torch.randn(in_dim, n_freq) * s
             self.register_buffer("B", B)
