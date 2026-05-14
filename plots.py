@@ -21,11 +21,11 @@ def plot_results(ac, ch):
     fig = plt.figure(figsize=(20, 14))
     fig.patch.set_facecolor("#0d0d0d")
     
-    # Grid: 4 rows (Header, AC, CH-phi, CH-mu), 6 columns (4 snapshots + 2 for curves)
+
     gs = gridspec.GridSpec(4, 6, figure=fig, hspace=0.45, wspace=0.35,
                            left=0.06, right=0.97, top=0.92, bottom=0.06)
 
-    # ─── 0. Header ──────────────────────────────────────────────────────────
+    # Header
     ax_title = fig.add_subplot(gs[0, :])
     ax_title.axis("off")
     ax_title.text(0.5, 0.7, "2D Phase-Field PINNs · Allen-Cahn & Cahn-Hilliard",
@@ -34,7 +34,7 @@ def plot_results(ac, ch):
     ax_title.text(0.5, 0.15, f"ε = {ac.eps}  |  domain [0,1]²  |  T = {T}  |  Neumann BC",
                   ha="center", va="center", fontsize=10, color="#aaaaaa", fontfamily="monospace")
 
-    # ─── 1-3. Spatial Snapshots ─────────────────────────────────────────────
+    # Spatial Snapshots
     kw_ac = dict(cmap="RdBu_r", vmin=-1.05, vmax=1.05, origin="lower", extent=[0, 1, 0, 1])
     kw_ch = dict(cmap="PiYG", vmin=-1.0, vmax=1.0, origin="lower", extent=[0, 1, 0, 1])
 
@@ -47,7 +47,7 @@ def plot_results(ac, ch):
         ax.set_xticks([]); ax.set_yticks([])
         if col == 0: ax.set_ylabel("Allen-Cahn φ", color="#ff9966", fontsize=9)
 
-        # Cahn-Hilliard (System outputs 2 variables)
+        # Cahn-Hilliard
         phi_ch, mu_ch = ch.pred_grid(t_val, nx)
         
         ax2 = fig.add_subplot(gs[2, col])
@@ -60,7 +60,7 @@ def plot_results(ac, ch):
         ax3.set_xticks([]); ax3.set_yticks([])
         if col == 0: ax3.set_ylabel("Cahn-Hilliard μ", color="#cc99ff", fontsize=9)
 
-    # ─── 4. Loss and Physics Diagnostics ────────────────────────────────────
+    # Loss Diagnostics
     ax_l1 = fig.add_subplot(gs[1, 4:])
     ax_l2 = fig.add_subplot(gs[2, 4:])
     ax_l3 = fig.add_subplot(gs[3, 4:])
