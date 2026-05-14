@@ -20,7 +20,7 @@ Both equations are solved on the unit domain $[0,1]^2$ with Neumann (zero-flux) 
 ## Architecture
 
 - Fully-connected network with **Random Fourier Feature** embedding (fixed frequency matrix, σ=1.0)
-- 4 hidden layers × 128 neurons, Tanh activations, Xavier initialisation
+- 5 hidden layers, Tanh activations, Xavier initialisation
 - Allen-Cahn: single output (φ), optimised with **Adam + ExponentialLR**
 - Cahn-Hilliard: two outputs (φ, μ), optimised with **L-BFGS + strong line search**
 
