@@ -54,7 +54,8 @@ Allen-Cahn shows smooth interface evolution of a circular droplet. Cahn-Hilliard
 
 ## Limitations
 
-PINNs encode the full space-time solution in a single network, which makes long-time integration (T > 0.5) unreliable for these equations. The network capacity required to resolve sharp interfaces over long timescales grows substantially, and accuracy degrades. This is a known limitation of the PINN formulation for phase-field PDEs and was the primary motivation for exploring operator learning approaches (FNO, DeepONet) for this class of problems.
+PINNs encode the full space-time solution in a single network, which makes long-time integration (T > 0.5) unreliable for these equations. The network capacity required to resolve sharp interfaces over long timescales grows substantially, and accuracy degrades. This is a known limitation of the PINN formulation for phase-field PDEs and was the primary motivation for exploring operator learning approaches(FNO) for this class of problems.
+
 
 ---
 
