@@ -1,5 +1,5 @@
 # Thermo2DPINN
-# Thermo2DPINN
+# TPINN: Thermodynamics-Informed Neural Networks for phase separation
 
 2D  Thermodynamic Physics-Informed Neural Networks (TPINNs) for the Allen-Cahn and Cahn-Hilliard phase-field equations, implemented in PyTorch.
 
