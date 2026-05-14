@@ -45,8 +45,8 @@ ExponentialLR is incompatible with L-BFGS because the scheduler would fire up to
 ## Results
 
 Trained on a single NVIDIA T4 GPU (Google Colab). Parameters: ε=0.15, M=1.0, T=0.5.
+<img width="5706" height="3792" alt="results_dashboard" src="https://github.com/user-attachments/assets/4005bea9-be61-4096-aa46-3f71dd12c692" />
 
-![Phase Field PINNs](results/phase_field_pinns.png)
 
 Allen-Cahn shows smooth interface evolution of a circular droplet. Cahn-Hilliard shows characteristic spinodal decomposition with a bicontinuous morphology. The CH mass is approximately conserved across time snapshots.
 
