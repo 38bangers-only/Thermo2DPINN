@@ -1,7 +1,7 @@
 # Thermo2DPINN
 # Thermo2DPINN
 
-2D Physics-Informed Neural Networks for the Allen-Cahn and Cahn-Hilliard phase-field equations, implemented in PyTorch.
+2D  Thermodynamic Physics-Informed Neural Networks (TPINNs) for the Allen-Cahn and Cahn-Hilliard phase-field equations, implemented in PyTorch.
 
 ---
 
